@@ -6,38 +6,57 @@ html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MB Diagnostics & Coding | Mobile Mercedes Specialist</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 0; background-color: #111; color: #fff; line-height: 1.6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 0; background-color: #0b0b0b; color: #fff; line-height: 1.6; }
         
-        /* Premium Hero Banner Styling with Cache Buster */
+        /* Premium Hero Banner Styling */
         .hero-banner { 
             position: relative;
-            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url('cls-hero.jpg?v=2') no-repeat center center; 
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('cls-hero.jpg?v=2') no-repeat center center; 
             background-size: cover; 
-            height: 450px; 
+            height: 400px; 
             display: flex; 
             flex-direction: column; 
             justify-content: center; 
             align-items: center; 
             text-align: center; 
             padding: 20px;
-            border-bottom: 2px solid #333;
+            border-bottom: 1px solid #222;
         }
         
-        h1 { margin: 0; color: #fff; font-size: 2.8rem; letter-spacing: 2px; font-weight: 800; text-shadow: 0 4px 15px rgba(0,0,0,0.6); }
-        .tagline { color: #ccc; font-size: 1.3rem; margin-top: 12px; font-weight: 300; text-shadow: 0 2px 8px rgba(0,0,0,0.6); }
-        .location-badge { display: inline-block; background: rgba(17, 17, 17, 0.85); border: 1px solid #444; padding: 8px 20px; border-radius: 20px; font-size: 0.95rem; color: #00ff66; margin-top: 20px; font-weight: bold; backdrop-filter: blur(5px); }
+        h1 { margin: 0; color: #fff; font-size: 2.5rem; letter-spacing: 3px; font-weight: 800; text-shadow: 0 4px 15px rgba(0,0,0,0.8); }
+        .tagline { color: #aaa; font-size: 1.2rem; margin-top: 12px; font-weight: 300; letter-spacing: 1px; }
+        .location-badge { display: inline-block; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(0, 255, 102, 0.3); padding: 6px 18px; border-radius: 20px; font-size: 0.9rem; color: #00ff66; margin-top: 25px; font-weight: 600; letter-spacing: 0.5px; }
         
-        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
-        .card { background: #1a1a1a; border-radius: 8px; border: 1px solid #333; text-align: center; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; transition: transform 0.2s, border-color 0.2s; }
-        .card:hover { transform: translateY(-5px); border-color: #00ff66; }
-        .card-content { padding: 25px; display: flex; flex-direction: column; height: 100%; justify-content: space-between; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
         
-        h2 { color: #fff; font-size: 1.5rem; margin-bottom: 10px; }
-        p { color: #aaa; font-size: 0.95rem; margin-bottom: 20px; }
-        .price { color: #00ff66; font-size: 1.25rem; font-weight: bold; margin-bottom: 20px; display: block; }
-        .btn { display: inline-block; background: #fff; color: #111; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: background 0.2s; }
-        .btn:hover { background: #00ff66; color: #111; }
+        /* Symmetrical Grid Layout */
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        
+        /* Balanced Card Flexbox */
+        .card { 
+            background: #121212; 
+            border-radius: 12px; 
+            border: 1px solid #222; 
+            display: flex; 
+            flex-direction: column; 
+            overflow: hidden; 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .card:hover { transform: translateY(-5px); border-color: #00ff66; box-shadow: 0 10px 30px rgba(0, 255, 102, 0.05); }
+        
+        /* Keeps inner sections aligned equally */
+        .card-content { padding: 35px 30px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
+        .card-body { flex-grow: 1; margin-bottom: 25px; }
+        
+        h2 { color: #fff; font-size: 1.4rem; font-weight: 700; margin: 0 0 12px 0; letter-spacing: 0.5px; }
+        p { color: #888; font-size: 0.95rem; margin: 0; line-height: 1.5; }
+        
+        .price-wrapper { margin-bottom: 20px; padding-top: 15px; border-top: 1px solid #1f1f1f; }
+        .price-label { color: #666; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 2px; }
+        .price { color: #00ff66; font-size: 1.6rem; font-weight: 700; display: block; }
+        
+        .btn { display: block; background: #fff; color: #000; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: all 0.2s ease; text-align: center; box-sizing: border-box; }
+        .btn:hover { background: #00ff66; color: #000; }
     </style>
 </head>
 <body>
@@ -50,41 +69,52 @@ html
 
     <div class="container">
         <div class="services">
-            <!-- Existing Diagnostic Card -->
+            <!-- Star Diagnostics Card -->
             <div class="card">
                 <div class="card-content">
-                    <div>
+                    <div class="card-body">
                         <h2>Star Diagnostics</h2>
-                        <p>Dealer-level dealer diagnostics, fault finding, and live data logging using official software platforms.</p>
+                        <p>Dealer-level diagnostics, full system fault finding, and live data logging using official diagnostic platforms.</p>
                     </div>
                     <div>
+                        <div class="price-wrapper">
+                            <span class="price-label">Price</span>
+                            <span class="price">£60</span>
+                        </div>
                         <a href="#" class="btn">Enquire Now</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Existing Coding Card -->
+            <!-- Advanced Coding Card -->
             <div class="card">
                 <div class="card-content">
-                    <div>
+                    <div class="card-body">
                         <h2>Advanced Coding</h2>
-                        <p>Unlock hidden features, configure retrofits, update maps, and modules safely on your vehicle.</p>
+                        <p>Unlock hidden features, configure retrofits, update navigation maps, and pair replacement modules safely.</p>
                     </div>
                     <div>
+                        <div class="price-wrapper">
+                            <span class="price-label">Price</span>
+                            <span class="price">£80</span>
+                        </div>
                         <a href="#" class="btn">Enquire Now</a>
                     </div>
                 </div>
             </div>
 
-            <!-- New Tuning Card with Price -->
+            <!-- ECU Remapping Card -->
             <div class="card">
                 <div class="card-content">
-                    <div>
+                    <div class="card-body">
                         <h2>ECU Remapping</h2>
-                        <p>Safe Stage 1 performance software tuning and calibration. Optimised power delivery and improved fuel efficiency.</p>
+                        <p>Safe Stage 1 performance software tuning. Dyno-developed calibrations for optimised power and fuel efficiency.</p>
                     </div>
                     <div>
-                        <span class="price">From £200</span>
+                        <div class="price-wrapper">
+                            <span class="price-label">Price</span>
+                            <span class="price">£200</span>
+                        </div>
                         <a href="#" class="btn">Enquire Now</a>
                     </div>
                 </div>
